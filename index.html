@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/slick/slick.css" />
+    <link rel="stylesheet" href="assets/slick/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/loading.css" />
+    <!-- adobeフォント -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "hfp6lvf",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <title>MyPortfolio</title>
+  </head>
+  <body>
+    <!-- ローダー -->
+    <div id="splash">
+      <div id="splash_logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="256" height="282" viewBox="0 0 256 282">
+          <text
+            id="svg-text"
+            data-name="あなたと世界をつなぐ窓"
+            transform="translate(0 56)"
+            fill="#626f7f"
+            font-size="64"
+            font-family="YuGo-Bold, YuGothic"
+            font-weight="700"
+          >
+            <tspan x="0" y="0">あなたと</tspan>
+            <tspan x="0" y="109">世界を</tspan>
+            <tspan x="0" y="218">つなぐ窓</tspan>
+          </text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- マウスストーカー -->
+    <div id="stkr"></div>
+
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="site-title">MyPortfolio</h1>
+
+        <nav class="header__menu">
+          <div class="trigger header__menu__mask" data-target="header"></div>
+          <!-- /.header__menu__mask -->
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#profile" class="menu__link stkr-target">プロフィール</a>
+            </li>
+            <li class="menu__item">
+              <a href="#process" class="menu__link stkr-target">制作の流れ</a>
+            </li>
+            <li class="menu__item"><a href="#works" class="menu__link stkr-target">作品紹介</a></li>
+            <li class="menu__item">
+              <a href="#contact" class="menu__link stkr-target">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__hamburger">
+          <button class="trigger header__hamburger__trigger" data-target="header"></button>
+        </div>
+        <!-- / -->
+      </div>
+      <!-- /.header__inner -->
+    </header>
+
+    <!-- main-visual -->
+    <div class="main-visual">
+      <p class="main-visual__text">
+        そうだ、<br />
+        ホームページ<br />
+        作ろう
+      </p>
+    </div>
+
+    <!-- profile -->
+    <section id="profile" class="profile section section--background-color">
+      <div class="section__inner">
+        <div class="profile__container">
+          <!-- 左側 -->
+          <div class="profile__container__item">
+            <h2 class="section__title profile__title">プロフィール</h2>
+            <dl class="profile__definition">
+              <!-- 名前 -->
+              <dt class="profile__definition__title">氏名</dt>
+              <dd class="profile__definition__data">神田 吉昭</dd>
+              <br />
+              <!-- 年齢 -->
+              <dt class="profile__definition__title">年齢</dt>
+              <dd class="profile__definition__data">29歳</dd>
+              <br />
+              <!-- 経歴 -->
+              <dt class="profile__definition__title">経歴</dt>
+              <dd class="profile__definition__data">つれづれなるまゝに、</dd>
+            </dl>
+          </div>
+          <!-- /.container__item -->
+
+          <!-- 右側 -->
+          <div class="profile__container__item">
+            <p class="philosophy">
+              <b class="philosophy--emphasis">アイデア</b>を
+              <b class="philosophy--emphasis">かたち</b>に<br />
+              <b class="philosophy--emphasis">セカイ</b>へ
+              <b class="philosophy--emphasis">つなぐ</b>
+            </p>
+          </div>
+          <!-- /.container__item -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.inner -->
+    </section>
+
+    <!-- process -->
+    <section id="process" class="process section">
+      <div class="section__inner">
+        <h2 class="section__title">制作の流れ</h2>
+
+        <ol class="precess__head">
+          <li class="process__head__item">HTML</li>
+          <li class="process__head__item">CSS</li>
+          <li class="process__head__item">JavaScript</li>
+          <li class="process__head__item">WordPress</li>
+        </ol>
+
+        <ol class="process__body">
+          <!-- html -->
+          <li class="process__body__item html">
+            <h3 class="process__body__item__title html__title before-enter" data-content="HTML">
+              HTML
+            </h3>
+            <p class="process__body__item__text before-enter">
+              機械が判別できるように<b class="marker before-enter">文章の構造を定義します</b
+              >。検索結果の表示順位に影響し、
+              より見やすく、より有益と判断されたサイトから順に表示されます。
+            </p>
+            <div class="process__body__item__sample html__sample">
+              <p class="html__sample__text">&lt;h1&gt;ここはタイトルです&lt;/h1&gt;</p>
+              <p class="html__sample__text">&lt;p&gt;ここは段落です&lt;/p&gt;</p>
+              <p class="html__sample__text">&lt;img ここに画像を表示します&gt;</p>
+            </div>
+            <!-- /.process__body__item__sample -->
+          </li>
+
+          <!-- css -->
+          <li class="process__body__item css">
+            <h3 class="process__body__item__title css__title before-enter" data-content="CSS">
+              CSS
+            </h3>
+
+            <p class="process__body__item__text before-enter">
+              HTMLで定義した文章をスタイリングします。今度は機械ではなく、人が見やすいように
+              <b class="marker before-enter">レイアウトを変えたり、装飾を加えたりします</b>。
+            </p>
+
+            <div class="process__body__item__sample css__sample">
+              <div class="css__sample__btn">
+                <button
+                  class="btn btn--size-s trigger stkr-target"
+                  data-target="css-style"
+                  data-color="#626F7F"
+                >
+                  装飾する
+                </button>
+                <button
+                  class="btn btn--size-s trigger stkr-target"
+                  data-target="css-lyout"
+                  data-color="#626F7F"
+                >
+                  レイアウト変更
+                </button>
+              </div>
+
+              <div class="css__sample__body border-vartical">
+                <span class="border-horizon">
+                  <h4 class="css__sample__title">今日のランチ</h4>
+                  <div class="css__sample__container">
+                    <p class="css__sample__text">
+                      今日は牛肉・にんじん・玉ねぎ・ジャガイモを炒め、水を加えて煮込み、
+                      複数のスパイスや調味料をブレンドしたブロック状のものを加えてよく溶かし、
+                      とろみがつくまでさらに煮込んだものを、白米と一緒に食べてみました！
+                    </p>
+                    <figure class="css__sample__image">
+                      <img src="./assets/img/curryrice.jpg" alt="カレーライスの画像" />
+                    </figure>
+                  </div>
+                  <!-- /.css__sample__container -->
+                </span>
+              </div>
+              <!-- /.css__sample__body -->
+            </div>
+            <!-- /.process__body__item__sample -->
+          </li>
+
+          <!-- js -->
+          <li class="process__body__item js">
+            <h3 class="process__body__item__title js__title before-enter" data-content="JavaScript">
+              JavaScript
+            </h3>
+
+            <p class="process__body__item__text before-enter">
+              <b class="marker before-enter">ページに動きをつけます</b
+              >。ハンバーガーメニューと呼ばれる、三本線のメニュー
+              アイコンはJavaScriptによって制御されています。先ほどの｢装飾する｣｢レイアウト
+              変更｣のボタンもコントロールしています。
+            </p>
+
+            <div class="process__body__item__sample js__sample">
+              <button
+                class="trigger sample__hamburger__trigger is-active"
+                data-target="js"
+              ></button>
+              <div class="sample__hamburger is-active">
+                <ul class="sample__hamburger__list">
+                  <li class="sample__hamburger__item">カレーライス</li>
+                  <li class="sample__hamburger__item">カレーうどん</li>
+                  <li class="sample__hamburger__item">キーマカレー</li>
+                  <li class="sample__hamburger__item">スープカレー</li>
+                </ul>
+              </div>
+              <!-- /.sample__hamburger -->
+            </div>
+            <!-- /.process__body__item__sample -->
+          </li>
+
+          <!-- wp -->
+          <li class="process__body__item wp">
+            <h3 class="process__body__item__title wp__title before-enter" data-content="WordPress">
+              WordPress
+            </h3>
+
+            <p class="process__body__item__text before-enter">
+              コンテンツマネジメントシステム(CMS: Contents Management System)を使うこと で、<b
+                class="marker before-enter"
+                >プログラミングしなくてもウェブサイトを管理できます</b
+              >。 ブログサイトも簡単に
+              運用できます。現在、全ウェブサイトの約43%は、WordPressで運用されています。
+            </p>
+
+            <div class="process__body__item__sample wp__sample">
+              <div class="wp__sample__body">
+                <h4 class="wp__sample__title">”健康食”としてのカレー</h4>
+                <div class="wp__sample__container">
+                  <div class="wp__sample__main">
+                    <p class="wp__sample__text">
+                      カレーには何種類もの<b>スパイス</b>がブレンドされています。その中には、
+                      元々は<b>漢方薬</b>として日本に伝来していたものも多く、<b>高い健康効果</b>を
+                      発揮することが知られています。
+                    </p>
+
+                    <div class="wp__sample__wrap">
+                      <p class="wp__sample__text">
+                        たとえば、<b>ターメリック</b>(ウコン)に含まれる
+                        クルクミンは、一般的に<b>肝機能を高める</b>こと
+                        でよく知られていますが、他にも<b>美肌や脳機能を高める効果</b>もあります。
+                      </p>
+                      <figure class="wp__sample__image">
+                        <img src="./assets/img/turmeric.jpg" alt="ターメリックの画像" />
+                      </figure>
+                    </div>
+
+                    <div class="wp__sample__wrap">
+                      <figure class="wp__sample__image">
+                        <img src="./assets/img/spice.jpg" alt="スパイスの画像" />
+                      </figure>
+                      <p class="wp__sample__text">
+                        カレーには他にもたくさんのスパイスが含 まれており、素晴らしい作用がまだまだ
+                        たくさんあります！
+                      </p>
+                    </div>
+
+                    <p class="wp__sample__text"><b>さあ、カレーを食べましょう！！！</b></p>
+                    <!-- /.wp__sample__wrap -->
+                  </div>
+                  <!-- /.wp__sample__main -->
+
+                  <div class="wp__sample__aside">
+                    <h4 class="wp__sample__aside__title">カレー集</h4>
+                    <ul class="wp__sample__list">
+                      <li class="wp__sample__list__item">カレーライス</li>
+                      <li class="wp__sample__list__item">カレーうどん</li>
+                      <li class="wp__sample__list__item">キーマカレー</li>
+                      <li class="wp__sample__list__item">スープカレー</li>
+                    </ul>
+                  </div>
+                  <!-- /.wp__sample__aside -->
+                </div>
+                <!-- /.wp__sample__container -->
+              </div>
+              <!-- /.wp__sample__body -->
+            </div>
+            <!-- /.process__body__item__sample -->
+          </li>
+        </ol>
+      </div>
+      <!-- /.section__inner -->
+    </section>
+
+    <!-- works -->
+    <section id="works" class="works section section--background-color">
+      <div class="section__inner works__inner">
+        <h2 class="section__title">作品紹介</h2>
+
+        <div class="carousel">
+          <ul class="carousel__list" id="carousel">
+            <li class="carousel__item">
+              <figure class="carousel__image">
+                <img src="./assets/img/cafe.jpg" alt="" />
+              </figure>
+            </li>
+            <li class="carousel__item">
+              <figure class="carousel__image">
+                <img src="./assets/img/children.jpg" alt="" />
+              </figure>
+            </li>
+            <li class="carousel__item">
+              <figure class="carousel__image">
+                <img src="./assets/img/flower.jpg" alt="" />
+              </figure>
+            </li>
+          </ul>
+        </div>
+        <!-- /.carousel -->
+      </div>
+      <!-- /.section__inner -->
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="contact section">
+      <div class="section__inner">
+        <h2 class="section__title">お問い合わせ</h2>
+        <form action="" class="form">
+          <table class="table">
+            <tbody class="table__boby">
+              <tr class="table__row">
+                <th class="table__header">お名前</th>
+                <td class="table__data"><input type="text" class="input" /></td>
+              </tr>
+              <tr class="table__row">
+                <th class="table__header">メールアドレス</th>
+                <td class="table__data"><input type="text" class="input" /></td>
+              </tr>
+              <tr class="table__row">
+                <th class="table__header">電話番号</th>
+                <td class="table__data"><input type="text" class="input" /></td>
+              </tr>
+              <tr class="table__row">
+                <th class="table__header">お問い合わせ内容</th>
+                <td class="table__data">
+                  <textarea class="textarea" cols="30" rows="10"></textarea
+                  ><!-- /# -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="submit" class="btn contact__btn stkr-target" data-color="#807262">
+            送信
+          </button>
+        </form>
+      </div>
+      <!-- /.section_inner -->
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__title">MyPortfolio</p>
+        <ul class="menu">
+          <li class="menu__item"><a href="#profile" class="menu__link">プロフィール</a></li>
+          <li class="menu__item"><a href="#process" class="menu__link">制作の流れ</a></li>
+          <li class="menu__item"><a href="#works" class="menu__link">作品紹介</a></li>
+          <li class="menu__item"><a href="#contacts" class="menu__link">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <!-- /.footer__inner -->
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/slick/slick.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
