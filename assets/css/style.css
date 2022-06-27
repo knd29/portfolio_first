@@ -1179,13 +1179,13 @@ img {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 100%;
+    /* width: 100%; */
   }
 
-  .table__data,
+  /* .table__data,
   .input {
     width: 100%;
-  }
+  } */
 
   /*******************
         footer
