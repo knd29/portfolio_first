@@ -1051,9 +1051,13 @@ img {
   /*******************
       main-visual
   ******************/
+  .main-visual {
+    background-position: 35% center;
+    background-repeat: no-repeat;
+  }
   .main-visual__text {
     left: unset;
-    right: 60px;
+    right: 5vw;
   }
 
   /*******************
